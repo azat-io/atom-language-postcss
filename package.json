@@ -1,18 +1,11 @@
 {
-  "name": "atom-language-postcss",
-  "main": "./lib/atom-language-postcss",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "atom-language-postcss:toggle"
-  },
+  "name": "language-postcss",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for PostCSS",
   "repository": "https://github.com/atom/atom-language-postcss",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
-  "dependencies": {
+    "atom": "*",
+    "node": "*"
   }
 }
