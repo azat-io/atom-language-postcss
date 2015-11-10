@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/azat-io/atom-language-postcss.svg)](https://travis-ci.org/azat-io/atom-language-postcss)
 <img align="right" width="130" height="130" src="http://postcss.github.io/postcss/logo.svg">
 
-Adds syntax highlighting, completions and snippets to [PostCSS](https://github.com/postcss/postcss) files in Atom.
+Adds syntax highlighting to [PostCSS](https://github.com/postcss/postcss) `*.pcss` and `*.postcss` file extensions in Atom.
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to make grammar tweaks, etc.
 
@@ -23,6 +23,7 @@ Contributions are greatly appreciated. Please fork this repository and open a pu
 * [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link)
 * [postcss-pseudoelements](https://github.com/axa-ch/postcss-pseudoelements)
 * [postcss-responsive-images](https://github.com/azat-io/postcss-responsive-images)
+* [postcss-russian-units](https://github.com/Semigradsky/postcss-russian-units)
 * [postcss-selector-matches](https://github.com/postcss/postcss-selector-matches)
 * [postcss-selector-not](https://github.com/postcss/postcss-selector-not)
 * [postcss-size](https://github.com/postcss/postcss-size)
