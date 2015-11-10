@@ -7,6 +7,8 @@ Adds syntax highlighting to [PostCSS](https://github.com/postcss/postcss) `*.pcs
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to make grammar tweaks, etc.
 
+![](https://github.com/azat-io/atom-language-postcss/blob/master/usage/postcss-atom.png?raw=true)
+
 ## Currently support syntax of the following PostCSS plugins
 
 * [postcss-calc](https://github.com/postcss/postcss-calc)
