@@ -1,5 +1,8 @@
-# atom-language-postcss package
+# Atom PostCSS language
+<img align="right" width="95" height="95" src="http://postcss.github.io/postcss/logo.svg">
 
-A short description of your package.
+Atom text editor package which adds syntax highlighting to PostCSS files in Atom.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+Pull requests are welcome.
+
+## Currently support syntax of the following PostCSS plugins
