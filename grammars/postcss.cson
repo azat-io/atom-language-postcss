@@ -40,6 +40,13 @@
     'match': '\\---?[_a-zA-Z]+[_a-zA-Z0-9-]*'
     'name': 'variable.var.postcss'
   }
+    {
+      'captures':
+        '1':
+          'name': 'punctuation.definition.entity.postcss'
+      'match': '\\$-?[_a-zA-Z]+[_a-zA-Z0-9-]*'
+      'name': 'variable.var.postcss'
+    }
   {
     'match': '^ *&'
     'name': 'entity.language.postcss'
