@@ -1,0 +1,5 @@
+'fileTypes': [
+  'pcss'
+  'postcss'
+]
+'name': 'PostCSS'
