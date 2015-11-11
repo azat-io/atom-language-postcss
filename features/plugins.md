@@ -33,22 +33,22 @@ Currently support syntax of the following plugins.
 
 ### Fallbacks
 
-* [`postcss-color-rgba-fallback`] transforms `rgba()` to hexadecimal.
+* [`postcss-color-rgba-fallback`] transforms `rgba()` to hexadecimal. :heavy_check_mark:
 * [`postcss-epub`] adds the `-epub-` prefix to relevant properties.
-* [`postcss-fallback`] adds `fallback` function to avoid duplicate declarations.
-* [`postcss-mqwidth-to-class`] converts min/max-width media queries to classes.
-* [`postcss-opacity`] adds opacity filter for IE8.
+* [`postcss-fallback`] adds `fallback` function to avoid duplicate declarations. :heavy_check_mark:
+* [`postcss-mqwidth-to-class`] converts min/max-width media queries to classes. :heavy_check_mark:
+* [`postcss-opacity`] adds opacity filter for IE8. :heavy_check_mark:
 * [`postcss-pseudoelements`] Convert `::` selectors into `:` selectors
-  for IE 8 compatibility.
+  for IE 8 compatibility. :heavy_check_mark:
 * [`postcss-round-subpixels`] plugin that rounds sub-pixel values to the nearest
-  full pixel.
-* [`postcss-unmq`] removes media queries while preserving desktop rules for IE≤8.
-* [`postcss-vmin`] generates `vm` fallback for `vmin` unit in IE9.
-* [`postcss-will-change`] inserts 3D hack before `will-change` property.
-* [`autoprefixer`] adds vendor prefixes for you, using data from Can I Use.
+  full pixel. :heavy_check_mark:
+* [`postcss-unmq`] removes media queries while preserving desktop rules for IE≤8. :heavy_check_mark:
+* [`postcss-vmin`] generates `vm` fallback for `vmin` unit in IE9. :heavy_check_mark:
+* [`postcss-will-change`] inserts 3D hack before `will-change` property. :heavy_check_mark:
+* [`autoprefixer`] adds vendor prefixes for you, using data from Can I Use. :heavy_check_mark:
 * [`cssgrace`] provides various helpers and transpiles CSS 3 for IE
-  and other old browsers.
-* [`pixrem`] generates pixel fallbacks for `rem` units.
+  and other old browsers. :heavy_check_mark:
+* [`pixrem`] generates pixel fallbacks for `rem` units. :heavy_check_mark:
 
 ### Language Extensions
 
