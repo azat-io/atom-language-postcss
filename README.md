@@ -7,4 +7,4 @@ Syntax highlighting to [PostCSS](https://github.com/postcss/postcss) `*.pcss` an
 
 Contributions are greatly appreciated. Please fork this repository and open a pull request to make grammar tweaks, etc.
 
-![](https://github.com/azat-io/atom-language-postcss/blob/master/usage/postcss-atom.png?raw=true)
+![](https://github.com/azat-io/atom-language-postcss/blob/master/features/postcss-atom.png?raw=true)
