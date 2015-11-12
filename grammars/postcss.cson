@@ -214,5 +214,18 @@
     'match': '\\b(кзс|вычс|кзсп|урл|аттр|от|до)\\b'
     'name': 'storage.name.tag.postcss'
   }
+  # Spanish style sheets
+  {
+    'match': '\\b(fondo|flota|ancho|alto|puntero|redondeado|izquierda|derecha|arriba|abajo|espaciado)\\b'
+    'name': 'entity.name.type.property-name.postcss'
+  }
+  {
+    'match': '\\b(subrayado|manito|mayuscula|izquierda|derecha|arriba|abajo)\\b'
+    'name': 'variable.property-value.postcss'
+  }
+  {
+    'match': '(\\b|\\s)(!importantisimo)\\b'
+    'name': 'keyword.control.postcss'
+  }
 ]
 'scopeName': 'source.postcss'
