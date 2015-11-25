@@ -1,4 +1,4 @@
-'scopeName': 'source.postcss'
+'scopeName': 'source.css.postcss'
 'fileTypes': [
   'pcss'
   'postcss'
