@@ -283,6 +283,32 @@
         'include': '#comment_line'
       }
     ]
+  'at_rule_custom_selector':
+    'begin': '\\s*((@)custom-selector\\b)\\s*'
+    'captures':
+      '1':
+        'name': 'keyword.control.at-rule.custom-selector.postcss'
+      '2':
+        'name': 'punctuation.definition.keyword.postcss'
+    'end': '\\s*((?=;)|(?=\\}))'
+    'name': 'meta.at-rule.custom-selector.postcss'
+    'patterns': [
+      {
+        'include': '#variable'
+      }
+      {
+        'include': '#string_single'
+      }
+      {
+        'include': '#string_double'
+      }
+      {
+        'include': '#functions'
+      }
+      {
+        'include': '#comment_line'
+      }
+    ]
   'at_rule_include':
     'patterns': [
       {
@@ -1170,6 +1196,9 @@
   }
   {
     'include': '#at_rule_custom_media'
+  }
+  {
+    'include': '#at_rule_custom_selector'
   }
   {
     'include': '#general'
