@@ -244,4 +244,4 @@
     'name': 'support.constant.color.w3c-standard-color-name.postcss'
   }
 ]
-'scopeName': 'source.postcss'
+'scopeName': 'source.css.postcss.sugarss'
