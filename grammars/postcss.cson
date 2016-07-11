@@ -232,6 +232,32 @@
         'include': '#comment_line'
       }
     ]
+  'at_rule_value':
+    'begin': '\\s*((@)value\\b)\\s*'
+    'captures':
+      '1':
+        'name': 'keyword.control.at-rule.value.postcss'
+      '2':
+        'name': 'punctuation.definition.keyword.postcss'
+    'end': '\\s*((?=;)|(?=\\}))'
+    'name': 'meta.at-rule.value.postcss'
+    'patterns': [
+      {
+        'include': '#variable'
+      }
+      {
+        'include': '#string_single'
+      }
+      {
+        'include': '#string_double'
+      }
+      {
+        'include': '#functions'
+      }
+      {
+        'include': '#comment_line'
+      }
+    ]
   'at_rule_use':
     'begin': '\\s*((@)use\\b)\\s*'
     'captures':
