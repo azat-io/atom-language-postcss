@@ -1,6 +1,6 @@
 {
   "name": "language-postcss",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Syntax highlighting for PostCSS",
   "repository": "https://github.com/azat-io/atom-language-postcss",
   "license": "MIT",
