@@ -29,6 +29,21 @@
         'include': '#string_double'
       }
     ]
+  'at_rule_apply':
+    'begin': '\\s*((@)apply\\b)\\s*'
+    'captures':
+      '1':
+        'name': 'keyword.control.at-rule.apply.postcss'
+      '2':
+        'name': 'punctuation.definition.keyword.postcss'
+    'comment': 'Apply'
+    'end': '\\s*((?=;|$))'
+    'name': 'meta.at-rule.apply.postcss'
+    'patterns': [
+      {
+        'include': '#variable'
+      }
+    ]
   'at_rule_content':
     'begin': '\\s*((@)content\\b)\\s*'
     'captures':
@@ -1250,6 +1265,9 @@
   }
   {
     'include': '#at_rule_charset'
+  }
+  {
+    'include': '#at_rule_apply'
   }
   {
     'include': '#at_rule_option'
