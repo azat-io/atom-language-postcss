@@ -247,6 +247,24 @@
         'include': '#comment_line'
       }
     ]
+  'at_rule_nest':
+    'begin': '\\s*((@)nest\\b)\\s*'
+    'captures':
+      '1':
+        'name': 'keyword.control.at-rule.nest.postcss'
+      '2':
+        'name': 'punctuation.definition.keyword.postcss'
+    'comment': 'The Nesting At-Rule'
+    'end': '\\s*(?=\\{)'
+    'name': 'meta.at-rule.nest.postcss'
+    'patterns': [
+      {
+        'include': '#selectors'
+      }
+      {
+        'include': '#property_values'
+      }
+    ]
   'at_rule_value':
     'begin': '\\s*((@)value\\b)\\s*'
     'captures':
@@ -1274,6 +1292,9 @@
   }
   {
     'include': '#at_rule_namespace'
+  }
+  {
+    'include': '#at_rule_nest'
   }
   {
     'include': '#at_rule_fontface'
