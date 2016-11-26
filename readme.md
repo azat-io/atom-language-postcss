@@ -1,6 +1,8 @@
 # Atom PostCSS language
 
-[![apm](https://img.shields.io/apm/dm/language-postcss.svg?maxAge=2592000)]()
+[![apm](https://img.shields.io/apm/v/language-postcss.svg)](https://atom.io/packages/language-postcss)
+[![apm](https://img.shields.io/apm/dm/language-postcss.svg?maxAge=2592000)](https://atom.io/packages/language-postcss)
+[![apm](https://img.shields.io/apm/l/language-postcss.svg)](https://atom.io/packages/language-postcss)
 
 Adds syntax highlighting to [PostCSS](https://github.com/postcss/postcss) `*.pcss` `*.css` files and [SugarSS](https://github.com/postcss/sugarss) `*.sss` files in Atom.
 
