@@ -240,7 +240,7 @@ describe 'PostCSS grammar', ->
       expect(tokens[14]).toEqual value: 'and', scopes: ['source.css.postcss', 'meta.at-rule.media.postcss', 'keyword.control.operator']
       expect(tokens[16]).toEqual value: 'min-width', scopes: ['source.css.postcss', 'meta.at-rule.media.postcss', 'support.type.property-name.media.css']
       expect(tokens[18]).toEqual value: '700', scopes: ['source.css.postcss', 'meta.at-rule.media.postcss', 'constant.numeric.postcss']
-      expect(tokens[19]).toEqual value: 'px', scopes: ['source.css.postcss', 'meta.at-rule.media.postcss', 'keyword.other.unit.postcss']
+      expect(tokens[19]).toEqual value: 'px', scopes: ['source.css.postcss', 'meta.at-rule.media.postcss', 'constant.numeric.postcss', 'keyword.other.unit.postcss']
 
   describe 'variable setting', ->
     it 'parses all tokens', ->
