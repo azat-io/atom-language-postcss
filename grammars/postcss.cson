@@ -719,6 +719,9 @@
   'constant_mathematical_symbols':
     'match': '(\\b(\\+|\\-|\\*|/)\\b)'
     'name': 'support.constant.mathematical-symbols.postcss'
+  'constant_number':
+    'match': '(\\b([0-9]+(\\.[0-9]+)?)|\\B\\.[0-9]+)(?=\\s*(ch|cm|deg|dpi|dpcm|dppx|em|ex|grad|in|mm|mozmm|ms|pc|pt|px|rad|rem|turn|s|vh|vmin|vmax|vw|\\b))'
+    'name': 'constant.numeric.postcss'
   'constant_optional':
     'match': '\\!optional'
     'name': 'keyword.other.optional.postcss'
@@ -751,8 +754,11 @@
       }
     ]
   'constant_unit':
+    'captures':
+      '1':
+        'name': 'keyword.other.unit.postcss'
     'match': '(?<![a-zA-Z])(?x)\n\t\t\t\t(?:-|\\+)?(?:(?:[0-9]+(?:\\.[0-9]+)?)|(?:\\.[0-9]+))\n\t\t\t\t((?:ch|cm|deg|dpi|dpcm|dppx|em|ex|grad|in|mm|ms|pc|pt|px|rad|rem|turn|s|vh|vmin|vmax|vw|тч|пиксель|пикселя|пикселей|пои|пик|градус|град|рад|пов|сек|мсек|твд|твсм|твтч|Гц|кГц|рм|вк|чх|крм|пш|пв|точка|точки|точек|линия|линии|линий|ноготь|ногтя|ногтей|перст|перста|перстов|сотка|сотки|соток|дюйм|дюйма|дюймов|вершок|вершка|вершков|пядь|пяди|пядей|фут|фута|футов|аршин|аршина|аршинов|сажень|сажени|саженей|сажней|верста|версты|вёрст|миля|мили|миль)\\b|%)?'
-    'name': 'keyword.other.unit.postcss'
+    'name': 'constant.numeric.postcss'
   'flow_control':
     'patterns': [
       {
@@ -1227,6 +1233,29 @@
       }
       {
         'include': '#interpolation'
+      }
+    ]
+  'variable_setting':
+    'begin': '\\s*(\\$[A-Za-z0-9_-]+\\b)\\s*(:)\\s*'
+    'captures':
+      '1':
+        'name': 'variable.postcss'
+      '2':
+        'name': 'punctuation.separator.key-value.postcss'
+    'end': '\\s*(?=;)'
+    'name': 'meta.set.variable.postcss'
+    'patterns': [
+      {
+        'include': '#comment_block'
+      }
+      {
+        'include': '#comment_line'
+      }
+      {
+        'include': '#property_values'
+      }
+      {
+        'include': '#variable'
       }
     ]
   'cssnext_variables':
