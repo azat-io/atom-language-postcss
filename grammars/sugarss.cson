@@ -81,7 +81,7 @@
     'name': 'entity.other.attribute-name.pseudo-class.postcss'
   }
   {
-    'match': '\\b(:root|a|abbr|acronym|address|area|article|aside|audio|b|base|big|blackness|blend|blockquote|body|br|button|canvas|caption|cite|code|col|contrast|colgroup|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|hwb|i|iframe|img|input|ins|kbd|label|legend|li|lightness|link|main|map|mark|menu|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|pre|progress|q|rgba|rgb|s|samp|saturation|script|section|select|shade|span|strike|strong|style|sub|summary|sup|svg|table|tbody|td|textarea|tfoot|th|thead|time|tint|title|tr|tt|ul|var|video|whiteness)\\b'
+    'match': '\\b(:root|a|abbr|acronym|address|area|article|aside|audio|b|base|big|blackness|blend|blockquote|body|br|button|canvas|caption|cite|code|col|contrast|colgroup|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|(h[1-6])|head|header|hgroup|hr|html|hwb|i|iframe|img|input|ins|kbd|label|legend|li|lightness|link|main|map|mark|menu|meta|meter|nav|noframes|noscript|object(?!-)|ol|optgroup|option|output|p|param|pre|progress|q|rgba|rgb|s|samp|saturation|script|section|select|shade|span|strike|strong|style|sub|summary|sup|svg|table|tbody|td|textarea|tfoot|th|thead|time|tint|title|tr|tt|ul|var|video|whiteness)\\b'
     'name': 'storage.name.tag.postcss'
   }
   {
