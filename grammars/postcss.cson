@@ -728,6 +728,22 @@
   'constant_property_value':
     'match': '\\b(absolute|all-scroll|always|armenian|auto|baseline|below|bidi-override|block|bold|bolder|both|bottom|border-box|break-all|break-word|butt|capitalize|center|char|circle|cjk-ideographic|col-resize|collapse|column-reverse|column|contain|content-box|cover|crosshair|currentColor|dashed|decimal-leading-zero|decimal|default|disabled|disc|distribute-all-lines|distribute-letter|distribute-space|distribute|dotted|double|e-resize|ellipsis|fill|fixed|flex-end|flex-start|flex|georgian|groove|hand|hebrew|help|hidden|hiragana-iroha|hiragana|horizontal|ideograph-alpha|ideograph-numeric|ideograph-parenthesis|ideograph-space|inactive|inherit|inline-block|inline-flex|inline|inset|inside|inter-ideograph|inter-word|italic|justify|katakana-iroha|katakana|keep-all|landscape|left|lighter|line-edge|line-through|line|list-item|loose|lower-alpha|lower-greek|lower-latin|lower-roman|lowercase|lr-tb|ltr|medium|middle|move|n-resize|ne-resize|newspaper|no-drop|no-repeat|nw-resize|none|normal|not-allowed|nowrap|null|oblique|outset|outside|overline|pointer|portrait|preserve-3d|progress|relative|repeat-x|repeat-y|repeat|right|ridge|round|row-resize|row-reverse|row|rtl|s-resize|scroll|se-resize|separate|small-caps|solid|space-around|space-between|square|static|stretch|strict|super|sw-resize|table-cell|table-column-group|table-column|table-footer-group|table-header-group|table-row-group|table-row|table|tb-rl|text-bottom|text-top|text|thick|thin|top|transparent|underline|upper-alpha|upper-latin|upper-roman|uppercase|vertical-ideographic|vertical-text|visible|w-resize|wait|whitespace|wrap|wrap-reverse|zero|true|false|vertical|horizontal)\\b'
     'name': 'support.constant.property-value.postcss'
+  'escapes':
+    'patterns': [
+      {
+        'match': '\\\\[0-9a-fA-F]{1,6}'
+        'name': 'constant.character.escape.codepoint.css'
+      }
+      {
+        'begin': '\\\\$\\s*'
+        'end': '^(?<!\\G)'
+        'name': 'constant.character.escape.newline.css'
+      }
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.css'
+      }
+    ]
   'postcss_values':
     'match': '\\b(responsive|fix-legacy|fix|amaro|brannan|earlybird|inkwell|kalvin|lo-fi|nashville|toaster|small-caps|lining-nums)\\b'
     'name': 'support.constant.property-value.postcss'
@@ -1107,7 +1123,24 @@
     'captures':
       '1':
         'name': 'punctuation.definition.entity.css'
-    'match': '(\\.)[a-zA-Z0-9_-]+'
+      '2':
+        'patterns': [
+          {
+            'include': '#escapes'
+          }
+        ]
+    'match': '''(?x)
+          (\\.)                                  # Valid class-name
+          (
+            (?: [-a-zA-Z_0-9]|[^\\x00-\\x7F]     # Valid identifier characters
+              | \\\\(?:[0-9a-fA-F]{1,6}|.)       # Escape sequence
+            )+
+          )                                      # Followed by either:
+          (?= $                                  # - End of the line
+            | [\\s,.\\#)\\[:{>+~|]               # - Another selector
+            | /\\*                               # - A block comment
+          )
+        '''
     'name': 'entity.other.attribute-name.class.css'
   'selector_entities':
     'match': '\\b(:root|a|abbr|acronym|address|area|article|aside|audio|b|base|bdi|bdo|big|blockquote|body|br|button|canvas|caption|circle|cite|code|col|colgroup|data|datalist|dd|del|details|dfn|dialog|div|dl|dt|em|embed|eventsource|fieldset|figure|figcaption|footer|form|frame|frameset|g|(h[1-6])|head|header|hgroup|hr|html|i|iframe|img|input|ins|kbd|keygen|label|legend|li|line(?!-)|link|main|map|mark|menu|menuitem|meta|meter|nav|noframes|noscript|object|ol|optgroup|option|output|p|param|path|polygon|polyline|pre|progress|q|rb|rect|rp|rt|rtc|ruby|s|samp|script|section|select|small|source|span|strike|strong|style|sub|summary|sup|svg|table(?!-)|tbody|td|template|text(?!-)|textarea|textpath|tfoot|th|thead|time|title|tr|track|tspan|tt|u|ul|var|video|wbr)\\b'
